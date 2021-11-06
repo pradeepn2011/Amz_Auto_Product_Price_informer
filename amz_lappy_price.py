@@ -26,7 +26,7 @@ def check_lappy_price():
     
     file_exist = True
 
-    if not os.path.exists('./lappy_price.csv'):
+    if not os.path.exists('./data/lappy_price.csv'):
         file_exist = False
         
     with open("lappy_price.csv","a") as file:
