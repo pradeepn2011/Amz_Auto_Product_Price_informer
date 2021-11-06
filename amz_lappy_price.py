@@ -33,7 +33,7 @@ def check_lappy_price():
             writer = csv.writer(file, lineterminator='\n')
             fields = ["Timestamp","price"]
             
-            if not file_exists:
+            if not file_exist:
                 writer.writerow(fields)
                        
             timestamp = f"{datetime.datetime.date(datetime.datetime.now())}, {datetime.datetime.time(datetime.datetime.now())}"
