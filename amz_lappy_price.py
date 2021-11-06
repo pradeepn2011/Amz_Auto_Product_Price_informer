@@ -4,6 +4,7 @@ import smtplib
 import csv
 import datetime
 import os
+import time
 
 url = 'https://www.amazon.in/HP-Processor-Windows-Natural-14s-dq2535TU/dp/B0928NL6F3/ref=sr_1_3?crid=TDQZ7CVY7YP0&dchild=1&keywords=hp+14+2021+11th+gen+intel+core+i5+laptop&qid=1635607127&sprefix=hp+14+2021+11th+gen+intel+core+i5+laptop%2Caps%2C273&sr=8-3'
 
@@ -25,11 +26,15 @@ def check_lappy_price():
     
     file_exist = True
 
-    if not os.path.exists('./lappy_price.csv', index = False):
+    if not os.path.exists('./lappy_price.csv'):
         file_exist = False
         
     with open("lappy_price.csv","a") as file:
             writer = csv.writer(file, lineterminator='\n')
+            fields = ["Timestamp","price"]
+            
+             if not file_exists:
+            writer.writerow(fields)
                        
             timestamp = f"{datetime.datetime.date(datetime.datetime.now())}, {datetime.datetime.time(datetime.datetime.now())}"
             # info on new 'f' string: https://realpython.com/python-f-strings/
