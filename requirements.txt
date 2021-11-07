@@ -3,4 +3,4 @@
 # platform: linux-64
 pandas==1.0.5
 requests==2.24.0
-eautifulsoup4==4.9.1
+Beautifulsoup4==4.9.1
