@@ -1,5 +1,5 @@
 import requests #ver:2.24.0 
-from bs4 import BeautifulSoup #ver:4.9.1 
+from bs4 import BeautifulSoup #BeautifulSoup=ver:4.9.1, bs4=0.0.1 
 import smtplib
 import csv
 import datetime
