@@ -1,5 +1,5 @@
-import requests #ver:2.24.0 
-from bs4 import BeautifulSoup #BeautifulSoup=ver:4.9.1, bs4=0.0.1 
+import requests  
+from bs4 import BeautifulSoup 
 import smtplib
 import csv
 import datetime
@@ -27,7 +27,7 @@ def check_lappy_price():
     if not os.path.exists('./data/lappy_price.csv'):
         file_exist = False
         
-    with open("./data/lappy_price.csv","a") as file:
+    with open("lappy_price.csv","a") as file:
             writer = csv.writer(file, lineterminator='\n')
             fields = ["Timestamp","price"]
             
