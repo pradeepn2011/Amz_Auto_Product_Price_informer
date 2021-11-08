@@ -14,10 +14,11 @@ def check_lappy_price():
 
     page = requests.get(url, headers=headers)
 
-    bs = BeautifulSoup(page.content, 'lxml')
+    bs = BeautifulSoup(page.content, 'html.parser')
     
-    product_title = bs.find(id = "productTitle").get_text()    
-    price = bs.find(id = "priceblock_ourprice").get_text() 
+    product_title = bs.find(id = "productTitle").get_text()
+    print(product_title)
+    price = bs.find(id = "priceblock_ourprice").get_text()
     
     price = price[1:7]
     price_float =  float(price.replace(",",""))
