@@ -29,7 +29,7 @@ def check_lappy_price():
     if not os.path.exists('./data/lappy_price.csv'):
         file_exist = False
         
-    with open("lappy_price.csv","a") as file:
+    with open("./data/lappy_price.csv","a") as file:
             writer = csv.writer(file, lineterminator='\n')
             fields = ["Timestamp","price"]
             
