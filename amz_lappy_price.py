@@ -40,7 +40,7 @@ def check_lappy_price():
             # info on new 'f' string: https://realpython.com/python-f-strings/
             writer.writerow([timestamp, price_float])
             
-            print("***** Wrote data in to file *****")
+            print("***** Wrote data in to file @ *****",datetime.datetime.now())
     
     return price_float
 
