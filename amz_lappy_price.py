@@ -2,7 +2,9 @@ import requests
 from bs4 import BeautifulSoup 
 import smtplib
 import csv
-import datetime
+from datetime import datetime
+from dateutil.tz 
+import gettz
 import os
 import time
 
@@ -39,7 +41,7 @@ def check_lappy_price():
             # info on new 'f' string: https://realpython.com/python-f-strings/
             writer.writerow([timestamp, price_float])
             
-            print("***** Wrote data in to file @ *****",datetime.datetime.now())
+            print("***** Wrote data in to file @ *****",datetime.now(tz=gettz('Asia/Kolkata')))
     
     return price_float
 
