@@ -3,8 +3,7 @@ from bs4 import BeautifulSoup
 import smtplib
 import csv
 from datetime import datetime
-from dateutil.tz 
-import gettz
+from dateutil.tz import gettz
 import os
 import time
 
