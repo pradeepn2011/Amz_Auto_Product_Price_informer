@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import smtplib
 import csv
 from datetime import datetime
-Import pytz
+import pytz
 import os
 import time
 
