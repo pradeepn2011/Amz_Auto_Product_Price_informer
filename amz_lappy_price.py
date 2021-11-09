@@ -23,6 +23,7 @@ def check_lappy_price():
     
     price = price[1:7]
     price_float =  float(price.replace(",",""))
+    print("price now is : ", price_float)
     
     file_exist = True
 
