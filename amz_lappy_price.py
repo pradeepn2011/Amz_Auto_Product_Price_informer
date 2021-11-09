@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 import smtplib
 import csv
 from datetime import datetime
-import pytz
+from dateutil.tz import gettz
+#import pytz
 import os
 import time
 
@@ -37,12 +38,12 @@ def check_lappy_price():
             if not file_exist:
                 writer.writerow(fields)
                        
-            UTC = pytz.utc
-            IST = pytz.timezone('Asia/Kolkata')
-            datetime_ist = datetime.now(IST)
+            #UTC = pytz.utc
+            #IST = pytz.timezone('Asia/Kolkata')
+            #datetime_ist = datetime.now(IST)
+            #timestamp = datetime_ist.strftime('%d:%m:%Y %H:%M:%S %Z %z')
             
-
-            timestamp = datetime_ist.strftime('%d:%m:%Y %H:%M:%S %Z %z')
+            timestamp =datetime.now(tz=gettz('Asia/Kolkata'))
             writer.writerow([timestamp, price_float])
             
             print("***** Wrote data in to file @ *****", timestamp)
