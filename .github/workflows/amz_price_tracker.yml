@@ -3,6 +3,8 @@ name: amz-product-price-tracker
 on:
   schedule:
     - cron: '6 * * * *' # runs every 59min  minimum once
+  pull_request:
+  branches: [master]
       
 jobs:
    build:
