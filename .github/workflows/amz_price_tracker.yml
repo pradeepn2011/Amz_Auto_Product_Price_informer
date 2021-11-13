@@ -3,10 +3,10 @@ name: amz-product-price-tracker
 on:
   schedule:
     - cron: '6 * * * *' # runs every 59min  minimum once
-    
-  pull_request:
-  branches: [master]
-      
+  push:
+    branches:
+      - master
+           
 jobs:
    build:
       runs-on: ubuntu-latest
@@ -39,3 +39,4 @@ jobs:
            with:
              github_token: ${{ secrets.GITHUB_TOKEN }}
              branch: main
+          
