@@ -20,7 +20,7 @@ def check_lappy_price():
     
     product_title = bs.find(id = "productTitle").get_text()
     print(product_title)
-    price = bs.find(id = "priceblock_ourprice").get_text()
+    price = bs.find(id = "priceblock_dealprice").get_text() #priceblock_dealprice, priceblock_ourprice
     
     price = price[1:7]
     price_float =  float(price.replace(",",""))
