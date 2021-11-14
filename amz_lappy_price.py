@@ -18,9 +18,17 @@ def check_lappy_price():
 
     bs = BeautifulSoup(page.content, 'html.parser') #lxml
     
-    product_title = bs.find(id = "productTitle").get_text()
-    print(product_title)
-    price = bs.find(id = "priceblock_dealprice").get_text() 
+    product_title = bs.find(id = "productTitle")
+    if product_title:
+        product_title = product_title.get_text()
+        print("product_title found: ", product_title)
+    else:
+        print("product_title was not found in page.content")
+    
+    
+    price = bs.find(id = "priceblock_dealprice").get_text()
+    if price:
+        price = price.get_text()
     #id=priceblock_ourprice or id=priceblock_dealprice, 
     #note: id keeps changing based on offer
     #price = bs.find(id = "priceblock_dealprice").get_text() #priceblock_dealprice, priceblock_ourprice
