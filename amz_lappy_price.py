@@ -26,7 +26,7 @@ def check_lappy_price():
         print("product_title was not found in page.content")
     
     
-    price = bs.find(id = "priceblock_dealprice").get_text()
+    price = bs.find(id = "priceblock_dealprice")
     if price:
         price = price.get_text()
     #id=priceblock_ourprice or id=priceblock_dealprice, 
