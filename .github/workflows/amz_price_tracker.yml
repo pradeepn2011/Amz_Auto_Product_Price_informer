@@ -2,7 +2,7 @@ name: amz-product-price-tracker
 
 on:
   schedule:
-    - cron: '6 * * * *' # runs every 59min  minimum once
+    - cron: '59 * * * *' # runs every 59min  minimum once
   
 jobs:
    build:
