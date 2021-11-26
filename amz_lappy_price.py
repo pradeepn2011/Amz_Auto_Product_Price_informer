@@ -20,7 +20,7 @@ def check_lappy_price():
     
     product_title = bs.find(id = "productTitle")
     if product_title:
-        product_title = product_title.get_text()
+        product_title = product_title.get_text().strip()
         print("product_title found: ", product_title)
     else:
         print("product_title was not found in page.content")
