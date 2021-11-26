@@ -37,4 +37,6 @@ jobs:
            with:
              github_token: ${{ secrets.GITHUB_TOKEN }}
              branch: main
-          
+         - uses: fastify/github-action-merge-dependabot@v.2.1.1
+           with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
