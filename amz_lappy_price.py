@@ -16,7 +16,7 @@ def check_lappy_price():
 
     page = requests.get(url, headers=headers)
 
-    bs = BeautifulSoup(page.content, 'html5lib') #lxml #html.parser
+    bs = BeautifulSoup(page.content, 'html5lib') #lxml #html5lib
     
     product_title = bs.find(id = "productTitle")
     if product_title:
